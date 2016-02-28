@@ -28,7 +28,7 @@
 const std::string http_404 {
   R"(HTTP/1.0 404 Not Found
 Content-Type: text/html
-Contetn-Length: 19
+Content-Length: 19
 
 <b>Bad request</b>
 )"};
