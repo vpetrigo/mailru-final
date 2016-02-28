@@ -360,7 +360,7 @@ Server_options parse_args(int argc, char *argv[]) {
     }
   }
 
-  LOG("Server parameters: " + so.ip + " " + std::to_string(so.port) + " " + so.home_dir);
+//  LOG("Server parameters: " + so.ip + " " + std::to_string(so.port) + " " + so.home_dir);
 
   return so;
 }
@@ -375,7 +375,7 @@ int main(int argc, char *argv[]) {
     exit(2);
   }
   else if (pid > 0) {
-    std::cout << "Succesfully created new child process. Exiting." << std::endl;
+//    std::cout << "Succesfully created new child process. Exiting." << std::endl;
     exit(0);
   }
   // setting all files permissions created by process for all
