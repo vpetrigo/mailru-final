@@ -35,6 +35,7 @@ ExternalProject_Add(
 ExternalProject_Add_Step(
     libuv c1
     COMMAND git clone https://chromium.googlesource.com/external/gyp.git build/gyp
+    DEPENDEES update
     DEPENDERS configure
     WORKING_DIRECTORY ${PROJECT_SOURCE_DIR}/libuv
 )
@@ -48,7 +49,7 @@ ExternalProject_Add_Step(
 #)
 
 find_package(Threads REQUIRED)
-message(${CMAKE_THREAD_LIBS_INIT})
+add_definitions(-std=c++11)
 include_directories(${PROJECT_SOURCE_DIR}/http-parser ${PROJECT_SOURCE_DIR}/libuv/include)
 link_directories(${PROJECT_SOURCE_DIR}/http-parser ${PROJECT_SOURCE_DIR}/libuv/out/Release)
 add_executable(final http_server.cpp)

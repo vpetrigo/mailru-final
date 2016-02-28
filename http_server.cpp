@@ -4,6 +4,7 @@
 #include <iomanip>
 #include <fstream>
 #include <utility>
+#include <stdexcept>
 #include <unistd.h>
 #include <sys/types.h>
 #ifdef _WIN32
